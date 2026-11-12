@@ -18,15 +18,21 @@ The HTML is where the real magic comes in, however. To display a variable, we si
 
 ```jsx
 function App() {
-  const {cards} = useDeck();
-  return <>
-    <p>Your cards:</p>
-    {cards.map((card) => <>
-      <b>{card.value}</b> of </b>{card.suit}</b>
-    </>}
-  </>;
+  const {cards, takeCard} = useDeck();
+
+  return (
+    <div>
+      <p>Your cards:</p>
+      {cards.map((card) => (
+        <p><b>{card.value}</b> of </b>{card.suit}</b></p>
+      )}
+      <button onClick={() => console.log(takeCard())}>Take Card</button>
+    </div>
+  );
 }
 ```
+
+The button when clicked calls useCard's addCard, and React detects the change in useState and this function rerenders. In a sense, it's "reactive"... get it?
 
 Guess what - this is all you need to know to get started building the app!
 
