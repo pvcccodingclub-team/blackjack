@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"target": "ES2024",
+		"lib": ["ES2024", "DOM", "DOM.Iterable"],
+		"types": ["react", "react-dom", "vite/client"],
+		"jsx": "react-jsx",
+		"module": "preserve",
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"noImplicitAny": false,
+		"noImplicitThis": false,
+		"noImplicitOverride": false,
+		"noImplicitReturns": false,
+		"noEmit": true,
+		"allowArbitraryExtensions": true
+	}
+}
